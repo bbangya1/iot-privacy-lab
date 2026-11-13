@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#081322">
+<title>IoT Privacy Lab | Introduction</title>
+<style>
+:root{--bg:#081322;--panel:#111f32;--line:#30415a;--text:#f1f6ff;--muted:#a9b8ca;--accent:#66e0c3;--orange:#ffbe79;--red:#ff8797;--blue:#89b8ff}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,sans-serif}body{overflow:hidden}button,a{font:inherit}a{color:var(--accent)}button{cursor:pointer}.shell{height:100dvh;display:flex;flex-direction:column}.top{height:64px;flex-shrink:0;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(16px,3vw,48px);gap:16px;background:#0b1828}.brand{font-weight:800;letter-spacing:.02em;font-size:15px}.brand b{color:var(--accent)}.tag{font-size:12px;color:var(--muted)}.track{display:flex;align-items:center;gap:12px}.counter{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}.progress{width:110px;height:4px;border-radius:8px;background:#2a394c;overflow:hidden}.fill{height:100%;width:0;background:var(--accent);transition:width .25s}.stage{position:relative;flex:1;min-height:0}.slide{position:absolute;inset:0;padding:clamp(24px,4vw,64px) clamp(20px,7vw,110px);display:none;overflow-y:auto}.slide.active{display:flex;flex-direction:column;justify-content:center;animation:appear .32s ease both}@keyframes appear{from{opacity:.3;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}.eyebrow{color:var(--accent);font-weight:750;font-size:clamp(12px,1.2vw,16px);letter-spacing:.16em;text-transform:uppercase;margin:0 0 18px}.slide h1{font-size:clamp(40px,6.3vw,94px);line-height:1.13;letter-spacing:-.055em;max-width:1140px;margin:0 0 24px}.slide h2{font-size:clamp(32px,4.1vw,64px);line-height:1.16;letter-spacing:-.045em;margin:0 0 28px;max-width:1150px}.lead{font-size:clamp(17px,2vw,28px);line-height:1.75;color:var(--muted);max-width:1020px;margin:0}.accent{color:var(--accent)}.orange{color:var(--orange)}.red{color:var(--red)}.blue{color:var(--blue)}.kicker{font-size:14px;color:var(--muted);letter-spacing:.06em;margin-top:14px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:25px 0}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(18px,2vw,28px);min-width:0}.card .symbol{font-size:clamp(26px,3vw,44px);margin-bottom:14px}.card h3{font-size:clamp(17px,1.8vw,25px);margin:0 0 10px}.card p{font-size:clamp(14px,1.25vw,18px);line-height:1.7;color:var(--muted);margin:0}.arrow{display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:30px}.rail{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:16px;align-items:stretch;margin:28px 0}.rail .card{text-align:center}.pill{display:inline-block;background:#183746;color:var(--accent);border:1px solid #356d71;padding:7px 12px;border-radius:30px;font-size:12px;font-weight:750}.quote{border-left:4px solid var(--accent);padding:12px 0 12px 24px;margin:20px 0;color:var(--text);font-weight:740;font-size:clamp(24px,3vw,44px);line-height:1.48;max-width:1060px}.terminal{background:#07111e;border:1px solid #35516a;border-radius:14px;overflow:hidden}.terminal-head{background:#18283b;padding:12px 18px;color:var(--muted);font-size:12px;display:flex;gap:8px;align-items:center}.terminal-head:before{content:"●  ●  ●";color:#ef9b78;letter-spacing:3px}.terminal pre{font-size:clamp(12px,1.2vw,17px);overflow:auto;padding:16px 22px;color:#b8f2d9;line-height:1.8;margin:0}.callout{margin-top:25px;border-radius:14px;padding:20px 24px;background:#163041;border:1px solid #377177;font-size:clamp(17px,1.6vw,23px);line-height:1.55}.callout.warn{background:#352333;border-color:#89546a}.source{margin-top:20px;color:var(--muted);font-size:12px;line-height:1.8}.source a{color:#b3d6ff}.bigyear{font-size:clamp(38px,5vw,72px);font-weight:850;color:var(--accent);letter-spacing:-.05em}.rule{height:1px;background:var(--line);margin:26px 0}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#061b1c;border:0;padding:14px 20px;border-radius:12px;font-weight:850;text-decoration:none}.btn:hover{filter:brightness(1.08)}.btn.secondary{background:transparent;border:1px solid #6a8598;color:var(--text)}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.iframe-wrap{height:min(60vh,650px);min-height:380px;background:#0d1625;border:1px solid var(--line);border-radius:14px;overflow:hidden}.iframe-wrap iframe{width:100%;height:100%;border:0;background:white}.small{font-size:14px;line-height:1.7;color:var(--muted)}.footer{height:56px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(16px,3vw,48px);border-top:1px solid var(--line);background:#0b1828}.footer .help{color:var(--muted);font-size:12px}.nav{display:flex;gap:8px}.nav button{background:#1b2c40;color:var(--text);border:1px solid #42546b;border-radius:9px;padding:8px 15px}.nav button:disabled{opacity:.3;cursor:default}.notes{display:none;position:absolute;z-index:3;right:16px;bottom:16px;max-width:480px;background:#142a3e;border:1px solid #527589;box-shadow:0 15px 60px #0008;border-radius:15px;padding:22px;font-size:15px;line-height:1.65}.notes.open{display:block}.note-toggle{color:var(--muted);font-size:12px;background:none;border:none;text-decoration:underline}.demo-slide.active{justify-content:flex-start}.demo-slide h2{font-size:clamp(24px,3vw,42px);margin-bottom:10px}.demo-slide .lead{font-size:clamp(14px,1.3vw,18px);margin-bottom:14px}.diagram{display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:32px}.node{padding:24px 30px;border:1px solid #59809b;background:#10273b;border-radius:15px;text-align:center;min-width:160px}.node strong{display:block;font-size:21px}.node span{display:block;font-size:13px;color:var(--muted);margin-top:8px}.light{color:var(--accent)}.reveal{background:#322037;border:1px solid #9a526c;border-radius:16px;padding:24px 30px;margin-top:24px}.reveal h3{color:#ffb7c3;margin:0 0 12px}.reveal p{font-size:19px;line-height:1.8;margin:0}.question-mark{font-size:clamp(90px,18vw,240px);color:#274b58;position:absolute;right:7%;top:10%;z-index:-1;font-weight:900}ul.check{list-style:none;padding:0;margin:20px 0}ul.check li{margin:12px 0;font-size:clamp(17px,1.55vw,23px)}ul.check li:before{content:"↳";color:var(--accent);margin-right:13px}.end-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}@media(max-width:760px){.top{height:56px}.tag,.footer .help{display:none}.slide{padding:24px 20px 40px}.grid,.grid.two{grid-template-columns:1fr}.rail{grid-template-columns:1fr;gap:9px}.arrow{transform:rotate(90deg);font-size:22px}.slide.active{justify-content:flex-start}.slide h1{font-size:clamp(36px,9vw,58px)}.slide h2{font-size:clamp(28px,7vw,48px)}.grid{gap:10px}.card{padding:16px}.card .symbol{font-size:24px;margin-bottom:4px}.card p{font-size:14px}.iframe-wrap{height:60vh;min-height:340px}.progress{width:60px}.footer{height:50px}.node{min-width:130px;padding:12px}.notes{max-width:calc(100% - 32px)}}@media print{body{overflow:visible;background:white;color:#111}.top,.footer,.notes{display:none!important}.shell{display:block;height:auto}.stage{display:block}.slide,.slide.active{position:relative;display:flex!important;min-height:90vh;page-break-after:always;break-after:page;overflow:visible;color:#111;background:white}.card,.terminal,.node,.reveal,.callout{color:#111;background:#f5f8fa;border-color:#aaa}.lead,.card p,.small,.source,.kicker{color:#444}.accent,.orange,.red,.blue{color:#146c67}.iframe-wrap{display:none}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top"><div class="brand"><b>IoT</b> PRIVACY LAB <span class="tag">/ INTRODUCTION</span></div><div class="track"><span id="counter" class="counter" aria-live="polite"></span><div class="progress"><div class="fill" id="fill"></div></div><button id="notesBtn" class="note-toggle" aria-label="발표자 노트 표시">발표 노트 N</button></div></header>
+<main class="stage" id="stage">
+<section class="slide active" data-note="첫 장에서 기술 이름을 설명하지 말고, 편리한 사물이 어느 순간 나를 너무 잘 알게 되는 상황을 상상하게 해주세요.">
+<p class="eyebrow">Graduate Seminar · IoT Open Issue</p><h1>사물이 똑똑해질수록,<br><span class="accent">우리의 일상은</span><br>얼마나 드러날까?</h1><p class="lead">연결된 사물에서 학습하는 사물로. 그리고 개인정보 보호형 AIoT 아키텍처가 필요한 이유.</p><p class="kicker">IoT PRIVACY LAB · INTERACTIVE INTRODUCTION</p>
+</section>
+<section class="slide" data-note="스마트워치, 스마트홈, 산업 센서를 떠올리게 합니다. IoT의 정의를 길게 설명할 필요는 없습니다.">
+<p class="eyebrow">01 / CONNECTIVITY</p><h2>사물이 <span class="accent">인터넷에 연결</span>되기 시작했습니다.</h2>
+<div class="grid"><div class="card"><div class="symbol">⌚</div><h3>스마트워치</h3><p>움직임과 심박수 등 다양한 상태를 측정합니다.</p></div><div class="card"><div class="symbol">🏠</div><h3>스마트홈</h3><p>집 안의 온도, 조명, 전력 사용량을 확인합니다.</p></div><div class="card"><div class="symbol">🏭</div><h3>산업용 센서</h3><p>설비 상태를 관찰하고 이상 징후를 전달합니다.</p></div></div>
+<p class="lead">IoT의 시작은 사물이 데이터를 <strong>수집하고 전달하는 것</strong>이었습니다.</p>
+</section>
+<section class="slide" data-note="AIoT는 반드시 모든 기기가 독립적으로 판단한다는 뜻은 아닙니다. 연결된 데이터와 AI가 결합된다는 점을 설명하세요.">
+<p class="eyebrow">02 / INTELLIGENCE</p><h2>이제 사물은 연결을 넘어<br><span class="accent">학습과 예측</span>을 시작합니다.</h2>
+<div class="grid two"><div class="card"><span class="pill">IoT</span><h3 style="margin-top:20px">사용자가 조작하는 집</h3><p>“에어컨을 24도로 설정해 줘.”<br>센서가 데이터를 수집하고, 명령을 수행합니다.</p></div><div class="card"><span class="pill">AIoT</span><h3 style="margin-top:20px">상황에 맞춰 반응하는 집</h3><p>“귀가할 시간에 맞춰 실내 온도를 조절할게.”<br>데이터에서 반복되는 패턴을 학습합니다.</p></div></div>
+<div class="callout">연결의 가치가 <strong>데이터를 통한 지능화</strong>로 확장됩니다.</div>
+</section>
+<section class="slide" data-note="개인의 생활을 잘 파악하는 편리함이 데이터 의존성과 연결된다는 흐름입니다. 무조건 더 많은 데이터가 좋다는 주장은 피하세요.">
+<p class="eyebrow">03 / DATA DEPENDENCY</p><h2>더 개인화된 AI를 만들려면<br><span class="orange">생활 속 데이터</span>가 활용됩니다.</h2>
+<div class="rail"><div class="card"><div class="symbol">📡</div><h3>수집</h3><p>움직임 · 전력 · 시간</p></div><div class="arrow">→</div><div class="card"><div class="symbol">☁️</div><h3>결합</h3><p>기기별 기록을 한곳에서 연결</p></div><div class="arrow">→</div><div class="card"><div class="symbol">🧠</div><h3>분석·학습</h3><p>생활 패턴을 특징으로 활용</p></div></div>
+<p class="lead">여기서 질문 하나. <strong style="color:white">센서 측정값에도 개인정보가 있을까요?</strong></p>
+</section>
+<section class="slide" data-note="움직임 0/1과 전력값만 보여주세요. 이 단계에서는 개인정보라는 단어를 잠시 숨기고 평범한 이벤트라는 인상을 강조합니다.">
+<p class="eyebrow">04 / EXPERIMENT · BEFORE</p><h2>수집되는 값은 <span class="accent">아주 단순합니다.</span></h2>
+<div class="grid two"><div class="card"><h3>동작 감지 센서</h3><div class="bigyear">0 / 1</div><p>해당 시간에 움직임이 감지됐는가?</p></div><div class="card"><h3>스마트 플러그</h3><div class="bigyear">3 / 65W</div><p>기기가 얼마나 많은 전력을 사용하는가?</p></div></div>
+<div class="terminal"><div class="terminal-head">Cloud telemetry · example</div><pre>{"device": "motion-01", "hour": "08:00", "value": 1}
+{"device": "plug-01",   "hour": "08:00", "watts": 65}</pre></div>
+<p class="small">예시는 합성 데이터이며 실사용자의 기록이 아닙니다.</p>
+</section>
+<section class="slide demo-slide" data-note="여기가 핵심 라이브 데모입니다. 자동 수집을 시작해 이벤트가 축적되는 과정을 보여주고, 24시간 이후 개인정보 추론 버튼을 눌러 주세요. iframe 안에서 마우스로 상호작용 가능합니다. 발표 화면이 작다면 전체화면으로 데모 열기를 누르세요.">
+<p class="eyebrow">05 / LIVE DEMO</p><h2>직접 확인해 볼까요?</h2><p class="lead">센서 이벤트가 클라우드에 쌓인 뒤, 결합된 데이터에서 어떤 정보가 나타나는지 확인해 보세요.</p>
+<div class="iframe-wrap"><iframe title="IoT 개인정보 추론 인터랙티브 대시보드" src="../dashboard/" loading="lazy" allow="fullscreen"></iframe></div>
+<div class="actions"><a class="btn secondary" href="../dashboard/" target="_blank" rel="noopener">↗ 데모 새 창에서 열기</a><span class="small">데모 조작: 수집 시작 → 24시간 이상 데이터 → 개인정보 추론 보기</span></div>
+</section>
+<section class="slide" data-note="센서의 무반응만으로 취침이나 외출을 확정하는 것이 아닙니다. 반복 패턴의 추정이며 다른 정보와 연결되면 민감성이 높아진다는 사실을 강조하세요.">
+<p class="eyebrow">06 / THE REVEAL</p><h2>우리가 모은 것은 센서값이지만,<br><span class="red">읽어낸 것은 일상</span>입니다.</h2>
+<div class="grid two"><div class="card"><h3>입력된 데이터</h3><p>움직임 0 또는 1<br>전력 사용량 W<br>측정 시간과 기기 식별자</p></div><div class="card"><h3>추정할 수 있는 정보</h3><p>반복되는 저활동 시간<br>취침 가능 시간대<br>외출 가능 시간대</p></div></div>
+<div class="reveal"><h3>중요한 차이</h3><p>센서 자체가 취침이나 외출을 직접 측정한 것은 아닙니다. 하지만 <strong>기록을 연결하고 반복 패턴을 관찰하면</strong> 개인의 생활을 추론할 수 있습니다.</p></div>
+</section>
+<section class="slide" data-note="데이터 주권은 단일한 법적 정의가 아니라 누가 데이터에 접근하고 통제하는가에 관한 논의라는 점을 설명합니다. GDPR과 EU Data Act를 혼동하지 마세요.">
+<p class="eyebrow">07 / DATA SOVEREIGNTY</p><h2>핵심은 데이터의 양이 아니라<br><span class="accent">누가 통제하는가</span>입니다.</h2>
+<div class="grid"><div class="card"><div class="symbol">🔎</div><h3>누가 볼 수 있나?</h3><p>원본 측정값과 분석 결과의 접근 권한</p></div><div class="card"><div class="symbol">🎯</div><h3>무엇을 위해 쓰이나?</h3><p>수집 목적과 추가 활용 범위</p></div><div class="card"><div class="symbol">🧭</div><h3>누가 결정하나?</h3><p>사용자의 접근·공유·이동에 관한 선택권</p></div></div>
+<p class="lead">이러한 통제와 권한의 문제는 <strong>데이터 주권(Data Sovereignty)</strong> 논의와 연결됩니다.</p>
+</section>
+<section class="slide" data-note="GDPR이 모든 데이터 수집을 금지하는 것은 아닙니다. 적법한 근거, 목적 제한, 최소화, 투명성과 권리를 요구한다는 점이 중요합니다. 식별 가능성이 전제되어야 개인정보입니다.">
+<p class="eyebrow">08 / REGULATION · GDPR</p><h2>개인정보 보호는 이제<br><span class="accent">설계 원칙</span>이기도 합니다.</h2>
+<div class="grid"><div class="card"><h3>GDPR</h3><p>식별되었거나 식별 가능한 자연인에 관한 정보를 개인정보로 다룹니다.</p></div><div class="card"><h3>Data Minimisation</h3><p>목적에 필요한 범위로 개인정보의 처리 범위를 제한합니다.</p></div><div class="card"><h3>Purpose Limitation</h3><p>특정하고 명확한 목적에 따라 수집·처리해야 합니다.</p></div></div>
+<div class="callout">“수집할 수 있는 데이터인가?”를 넘어 <strong>“이 목적에 반드시 필요한 데이터인가?”</strong>를 질문해야 합니다.</div>
+<p class="source">근거: <a href="https://europa.eu/youreurope/business/governance-and-sustainability/digital-and-data-compliance/data-protection-gdpr/index_en.htm" target="_blank" rel="noopener">EU — What is personal data?</a> · <a href="https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/principles-gdpr_en" target="_blank" rel="noopener">European Commission — GDPR principles</a></p>
+</section>
+<section class="slide" data-note="EU Data Act는 GDPR과 별개입니다. GDPR이 개인 정보 처리의 보호 원칙을 다룬다면 Data Act는 IoT 연결 제품 데이터에 대한 공정한 접근과 공유에 초점을 둡니다. 두 법은 상호 보완되며 개인정보 규칙을 대체하지 않습니다.">
+<p class="eyebrow">09 / REGULATION · EU DATA ACT</p><div class="bigyear">2025. 09. 12</div>
+<h2>연결된 제품의 데이터에 대한<br><span class="accent">사용자 권한</span>도 강화되고 있습니다.</h2>
+<div class="grid two"><div class="card"><h3>GDPR</h3><p>개인정보의 적법한 처리와 정보주체 보호에 관한 규범</p></div><div class="card"><h3>EU Data Act</h3><p>IoT 연결 제품 등에서 생성되는 데이터에 대한 접근·이용·공유의 공정한 규칙</p></div></div>
+<p class="lead">EU Data Act는 <strong>2025년 9월 12일부터 적용</strong>되고 있습니다. 모든 조항의 적용 시점이 동일한 것은 아닙니다.</p>
+<p class="source">근거: <a href="https://digital-strategy.ec.europa.eu/en/policies/data-act" target="_blank" rel="noopener">European Commission — Data Act</a> · <a href="https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng" target="_blank" rel="noopener">Regulation (EU) 2023/2854, Article 50</a></p>
+</section>
+<section class="slide" data-note="법률 준수를 기술 하나만으로 달성할 수는 없습니다. 그래도 불필요한 원본 데이터 이전을 줄이는 설계는 개인정보 처리 위험을 줄이는 실질적인 선택지입니다.">
+<p class="eyebrow">10 / ARCHITECTURAL QUESTION</p><h2>그렇다면 AI 학습은<br><span class="orange">반드시 데이터를 모아야</span> 할까요?</h2>
+<div class="grid two"><div class="card"><span class="pill">Centralized</span><h3 style="margin-top:18px">데이터를 서버로 이동</h3><p>기기별 원본 기록을 클라우드에 전송하여 중앙에서 학습</p></div><div class="card"><span class="pill">On-device + Federated</span><h3 style="margin-top:18px">학습을 데이터 가까이로 이동</h3><p>각 기기에서 학습하고, 보호된 모델 업데이트를 조합하는 접근</p></div></div>
+<div class="callout warn">주의: 연합학습도 자동으로 개인정보 보호를 보장하지 않습니다. <strong>모델 업데이트와 집계 결과에서도 정보가 노출될 수 있습니다.</strong></div>
+</section>
+<section class="slide" data-note="이 슬라이드가 본론 시작점입니다. Device–Edge–Cloud는 더 나은 효율을 줄 수 있지만 Edge를 추가 신뢰 경계로 도입합니다. 여기서 다음 섹션인 Open Issue로 자연스럽게 넘어갑니다.">
+<p class="eyebrow">11 / RESEARCH QUESTION</p><div class="question-mark">?</div><h1>데이터는 디바이스에.<br><span class="accent">학습은 함께.</span><br>개인정보는 안전하게?</h1>
+<p class="lead">Device–Edge–Cloud 환경에서 원본 데이터의 중앙 수집을 최소화하면서도 학습을 가능하게 하고, 중간 계층의 정보 노출까지 줄이는 아키텍처를 어떻게 설계할 수 있을까?</p>
+<div class="actions"><a class="btn" href="../dashboard/" target="_blank" rel="noopener">IoT 데모 다시 열기 ↗</a><a class="btn secondary" href="https://github.com/bbangya1/iot-privacy-lab" target="_blank" rel="noopener">GitHub Repository ↗</a></div>
+</section>
+<section class="slide" data-note="이 페이지는 발표 도중에는 건너뛰어도 좋습니다. 출처와 주의사항을 한 장으로 모아, 질문이 들어왔을 때 설명할 수 있게 구성했습니다.">
+<p class="eyebrow">APPENDIX / SOURCES & LIMITATIONS</p><h2>출처 및 시연의 한계</h2>
+<ul class="check"><li>데모는 실제 개인정보가 아닌 <strong>합성 센서 데이터</strong>를 사용합니다.</li><li>취침·외출 시간은 <strong>가능성의 추정</strong>이며 사실을 확정하지 않습니다.</li><li>시뮬레이터는 실제 ML 훈련이나 GDPR 준수 여부를 입증하지 않습니다.</li></ul>
+<div class="source">
+<a href="https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/principles-gdpr_en" target="_blank" rel="noopener">European Commission: Principles of the GDPR</a><br>
+<a href="https://europa.eu/youreurope/business/governance-and-sustainability/digital-and-data-compliance/data-protection-gdpr/index_en.htm" target="_blank" rel="noopener">Your Europe: Data protection under GDPR</a><br>
+<a href="https://digital-strategy.ec.europa.eu/en/policies/data-act" target="_blank" rel="noopener">European Commission: Data Act</a><br>
+<a href="https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng" target="_blank" rel="noopener">EUR-Lex: Regulation (EU) 2023/2854</a><br>
+<a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/online-tracking/guidance-for-consumer-internet-of-things-products-and-services/what-information-do-iot-products-use/" target="_blank" rel="noopener">ICO: What information do IoT products use?</a>
+</div>
+</section>
+<aside id="notes" class="notes" aria-live="polite"></aside>
+</main>
+<footer class="footer"><span class="help">← → 슬라이드 이동 · N 발표 노트 · F 전체 화면 · Home / End 처음·끝</span><div class="nav"><button id="prev" aria-label="이전 슬라이드">← 이전</button><button id="next" aria-label="다음 슬라이드">다음 →</button></div></footer>
+</div>
+<script>
+(function(){
+const slides=[...document.querySelectorAll(".slide")], counter=document.getElementById("counter"),fill=document.getElementById("fill"),notes=document.getElementById("notes");
+const prev=document.getElementById("prev"),next=document.getElementById("next");let index=0;
+function go(n){index=Math.max(0,Math.min(slides.length-1,n));slides.forEach((slide,i)=>{slide.classList.toggle("active",i===index);slide.setAttribute("aria-hidden",String(i!==index));});counter.textContent=String(index+1).padStart(2,"0")+" / "+String(slides.length).padStart(2,"0");fill.style.width=100*(index+1)/slides.length+"%";prev.disabled=index===0;next.disabled=index===slides.length-1;notes.textContent=slides[index].dataset.note||"";history.replaceState(null,"","#"+(index+1));}
+prev.addEventListener("click",()=>go(index-1));next.addEventListener("click",()=>go(index+1));document.getElementById("notesBtn").addEventListener("click",()=>notes.classList.toggle("open"));
+document.addEventListener("keydown",e=>{if(e.target.closest("input,textarea,select,button")&&e.key!=="Escape")return;if(e.key==="ArrowRight"||e.key==="PageDown"||e.key===" "){e.preventDefault();go(index+1)}else if(e.key==="ArrowLeft"||e.key==="PageUp"){e.preventDefault();go(index-1)}else if(e.key==="Home"){e.preventDefault();go(0)}else if(e.key==="End"){e.preventDefault();go(slides.length-1)}else if(e.key.toLowerCase()==="n"){notes.classList.toggle("open")}else if(e.key.toLowerCase()==="f"){if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.()}else if(e.key==="Escape"){notes.classList.remove("open")}});
+window.addEventListener("hashchange",()=>{const n=parseInt(location.hash.slice(1),10);if(Number.isFinite(n))go(n-1)});go((parseInt(location.hash.slice(1),10)||1)-1);
+})();
+</script>
+</body></html>
